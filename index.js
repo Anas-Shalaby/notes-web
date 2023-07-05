@@ -30,8 +30,7 @@ app.use(passport.session());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(methodOverride("_method")); // To allow put method to update something
-// Connect database
-connectDB();
+
 
 // STATIC FILES
 app.use(express.static('public'));  
@@ -55,7 +54,8 @@ app.get('*' , (req,res)=>{
 
 
 
-
-app.listen(PORT , ()=>{
-    console.log("App is running on " , PORT);
-})
+// Connect database
+connectDB().then(
+    app.listen(PORT , ()=>{
+        console.log("App is running on " , PORT);
+}));
