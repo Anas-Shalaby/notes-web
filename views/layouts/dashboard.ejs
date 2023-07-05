@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="home-dashboard">
+    <%- include("../partials/header_dashboard.ejs")  %>
+
+    <%- body  %>
+
+    <%- include("../partials/footer.ejs")  %>
+
+
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
