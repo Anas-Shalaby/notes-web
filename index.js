@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo');
 const methodOverride = require('method-override');
 
 const app = express();
-const PORT = 2000 || process.env.PORT;
+const PORT = process.env.PORT ||  2000;
 
 app.use(session({
     secret : process.env.SESSION_SECRET,
